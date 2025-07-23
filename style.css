@@ -10,8 +10,10 @@
 }
 /* shared selector */
 .container{
+    width: 100%;
     max-width: 1414px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .btn{
     font-weight: bold;
@@ -20,7 +22,7 @@
     background-color: red;
     border-radius: 10px;
     border: none;
-    
+    cursor: pointer;
 }
 .banner-area{
     display: flex;
@@ -62,8 +64,6 @@
     display: flex;
     margin-top: 30px;
     gap:40px;
-    
-    
 }
 .upcomming-matche{
     display: flex;
@@ -72,6 +72,7 @@
    width:25%;
     gap: 10px;
     padding: 20px;
+     height:fit-content;
     
 }
 .upcomming-matche .btn:nth-child(1){
@@ -84,13 +85,51 @@
 }
 .cards{
     flex:1;
-    border: 1px solid tomato;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+}
+.card{
+    box-shadow: 0 0px 25px rgb(59, 58, 58); ;
+}
+.cards .card img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px 10px 0 0;
+}
+.cards .card button{
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 4px 16px;
+    color: black;
+    border-radius: 5px;
+    border:1px solid rgb(59, 58, 58);
+    cursor: pointer;
+}
+.cards .card h4{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: black;
+    margin: 17px 0;
+}
+.cards .card br{
+    display: none;
+}
+.cards .card .icons{
+    display: flex;
+    gap: 40px;
+    color: rgb(59, 58, 58);
+}
+.cards .card .card-text-area{
+    padding:20px;
 }
 /* media responsive */
 
 @media screen and (max-width:768px) {
     .banner-area{
-        flex-direction:column;
+        max-width: 90%;
+      flex-direction:column;
        margin: 20px 20px;
        padding: 0 40px;
     }
@@ -110,19 +149,97 @@
 #banner-btn{
    margin:0 90px;
    white-space: nowrap;
-    
+}
+.upcomming-matches{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap:40px;
     
 }
+.upcomming-matche{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
 }
+.upcomming-matche .btn{
+    padding:20px 0;
+    font-size: 1rem;
+    border: 1px solid rgb(131, 123, 123);
+}
+.cards{
+    grid-template-columns: 1fr;
+    
+}
+.card{
+    margin: 0 20px;
+}
+
+}
+
 @media screen and (min-width:768px) and (max-width:992px){
-.left-side h2{
+    .container{
+     max-width: 100%;
+    padding: 0 20px;
+    }
+    .left-side h2{
     color: white;
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.2;
 }
+ .left-side h2 br{
+    display: none;
+ }
+ .left-side{
+    margin: 30px 70px;
+ }
 .banner-area{
-    margin: 50px;
+    margin:20px auto;
+    max-width: 98%;
     padding: 0 20px;
 }
+
+ 
+.right-side img{
+      display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.upcomming-matches{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap:40px;
+    max-width:100%;
+}
+.upcomming-matche{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
+}
+.upcomming-matche .btn{
+    padding:20px 30px;
+    font-size: 1rem;
+    border: 1px solid rgb(131, 123, 123);
+}
+.cards{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:px;
+    
+}
+
+.card{
+    margin: 0 20px;
+}
+
 }
