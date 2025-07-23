@@ -1,0 +1,128 @@
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* shared selector */
+.container{
+    max-width: 1414px;
+    margin: 0 auto;
+}
+.btn{
+    font-weight: bold;
+    color: white;
+    padding: 15px 25px;
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    
+}
+.banner-area{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.left-side{
+    color: white;
+    margin: 30px 120px;
+     flex: 1;
+}
+.left-side h2{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    
+}
+.left-side p{
+    margin: 30px 0;
+    font-size: 1rem;
+}
+#banner-btn{
+    margin-bottom: 20px;
+    display: flex;
+}
+.right-side{
+    flex: 1;
+}
+.right-side img{
+    
+    display: block;
+    width: 100%;
+    margin-top: 33px;
+}
+.upcomming-matches{
+    display: flex;
+    margin-top: 30px;
+    gap:40px;
+    
+    
+}
+.upcomming-matche{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+   width:25%;
+    gap: 10px;
+    padding: 20px;
+    
+}
+.upcomming-matche .btn:nth-child(1){
+    background-color: white;
+    color: black;
+}
+.upcomming-matche .btn:nth-child(2){
+    background-color: white;
+    color: black;
+}
+.cards{
+    flex:1;
+    border: 1px solid tomato;
+}
+/* media responsive */
+
+@media screen and (max-width:768px) {
+    .banner-area{
+        flex-direction:column;
+       margin: 20px 20px;
+       padding: 0 40px;
+    }
+    .left-side h2{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    
+}
+.left-side p{
+    margin: 30px 0;
+    font-size: 14px;
+    max-width: 100%;
+}
+#banner-btn{
+   margin:0 90px;
+   white-space: nowrap;
+    
+    
+}
+}
+@media screen and (min-width:768px) and (max-width:992px){
+.left-side h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.banner-area{
+    margin: 50px;
+    padding: 0 20px;
+}
+}
